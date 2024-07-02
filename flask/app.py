@@ -40,9 +40,9 @@ def submit_form():
 
       print(verification_check.status)
 
-      return f"Received: Username: {phone}, status: {verification_check.status}"
+      return f"{verification_check.status}"
     except:
       return f"Error: *101*"
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
