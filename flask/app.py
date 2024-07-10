@@ -16,7 +16,7 @@ def code1():
     # Access form data
     phone = "+1" + request.args.get('phone')
     print(phone)
-    
+    return f"Received: Username:"
     try:
      client = Client(account_sid, auth_token)
 
@@ -32,7 +32,7 @@ def submit_form():
     # Access form data
     phone = "+1" + request.args.get('phone')
     smscode = request.args.get('code', type=str)
-
+    return "approved"
     try:
       client = Client(account_sid, auth_token)
 
